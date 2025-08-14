@@ -6,6 +6,8 @@ pluginManagement {
 
         mavenCentral()
         gradlePluginPortal()
+        maven("https://mirrors.tencent.com/nexus/repository/maven-tencent")
+        maven("https://mirrors.tencent.com/nexus/repository/maven-public")
     }
 
     dependencyResolutionManagement {
@@ -14,6 +16,8 @@ pluginManagement {
             google()
             mavenCentral()
             // your repos
+            maven("https://mirrors.tencent.com/nexus/repository/maven-tencent")
+            maven("https://mirrors.tencent.com/nexus/repository/maven-public")
         }
     }
     resolutionStrategy {

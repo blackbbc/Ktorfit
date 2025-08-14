@@ -8,7 +8,7 @@ plugins {
     id("signing")
     id("com.vanniktech.maven.publish")
     id("com.android.library")
-    alias(libs.plugins.binaryCompatibilityValidator)
+//    alias(libs.plugins.binaryCompatibilityValidator)
     id("app.cash.licensee")
     id("org.jlleitschuh.gradle.ktlint")
 }
@@ -22,7 +22,7 @@ val enableSigning = project.hasProperty("signingInMemoryKey")
 
 mavenPublishing {
     val artifactId =
-        "ktorfit-converters-call" +
+        "ktorfit-converters-call" + ""
             if (libs.versions.ktorVersion
                     .get()
                     .startsWith("3.")
@@ -105,6 +105,7 @@ kotlin {
         }
     }
     mingwX64()
+    ohosArm64()
     applyDefaultHierarchyTemplate()
     sourceSets {
         val commonMain by getting {

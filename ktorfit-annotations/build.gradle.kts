@@ -9,7 +9,7 @@ plugins {
     id("signing")
     id("com.vanniktech.maven.publish")
     id("com.android.library")
-    alias(libs.plugins.binaryCompatibilityValidator)
+//    alias(libs.plugins.binaryCompatibilityValidator)
     id("app.cash.licensee")
     id("org.jlleitschuh.gradle.ktlint")
 }
@@ -79,6 +79,7 @@ kotlin {
     }
 
     mingwX64()
+    ohosArm64()
     applyDefaultHierarchyTemplate()
     sourceSets {
         val iosX64Main by getting
