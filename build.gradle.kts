@@ -16,6 +16,8 @@ buildscript {
             url = uri("https://maven.pkg.jetbrains.space/public/p/ktor/eap")
         }
         maven("https://maven.pkg.jetbrains.space/kotlin/p/wasm/experimental")
+        maven("https://mirrors.tencent.com/nexus/repository/maven-tencent")
+        maven("https://mirrors.tencent.com/nexus/repository/maven-public")
     }
     dependencies {
         classpath(libs.gradle.maven.publish.plugin)
@@ -35,5 +37,7 @@ subprojects {
             url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
         }
         maven("https://maven.pkg.jetbrains.space/kotlin/p/wasm/experimental")
+        maven("https://mirrors.tencent.com/nexus/repository/maven-tencent")
+        maven("https://mirrors.tencent.com/nexus/repository/maven-public")
     }
 }

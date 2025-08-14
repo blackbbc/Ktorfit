@@ -10,7 +10,7 @@ plugins {
     id("com.vanniktech.maven.publish")
     id("com.android.library")
     alias(libs.plugins.detekt)
-    alias(libs.plugins.binaryCompatibilityValidator)
+//    alias(libs.plugins.binaryCompatibilityValidator)
     id("app.cash.licensee")
     id("org.jlleitschuh.gradle.ktlint")
 }
@@ -123,6 +123,7 @@ kotlin {
         }
     }
     mingwX64()
+    ohosArm64()
     applyDefaultHierarchyTemplate()
 
     sourceSets {

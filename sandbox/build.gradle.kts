@@ -72,7 +72,6 @@ kotlin {
         val linuxX64Main by getting {
             dependencies {
                 implementation(libs.kotlinx.coroutines.core)
-                implementation(libs.ktor.client.curl)
                 implementation(libs.ktor.client.core.linuxX64)
                 implementation(libs.ktor.client.cio.linuxX64)
             }
