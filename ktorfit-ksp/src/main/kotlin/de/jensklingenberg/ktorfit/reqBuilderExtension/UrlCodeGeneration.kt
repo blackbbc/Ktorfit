@@ -44,5 +44,6 @@ fun getUrlCode(
         urlPath = urlPath.replace("{${pathAnnotation.value}}", "\${\"\$${paramName}\"$pathEncoded}")
     }
 
+    urlPath = urlPath.trimStart('/') // Avoid double slash in URL
     return "url{\ntakeFrom(${baseUrl}\"$urlPath\")\n" + queryCode + "}"
 }
